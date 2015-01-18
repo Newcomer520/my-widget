@@ -1,6 +1,6 @@
-my-simple-scaffold
+INIP TS16949 WIDGET
 ==================
 
-a simple scaffolding for development only
+make these core widgets first.
 
 

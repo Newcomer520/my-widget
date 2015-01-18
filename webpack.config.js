@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-	entry: ['./src/main.js'],
+	entry: ['./src/main.jsx'],
 	module: {
 		loaders: [
 			{test: /\.css$/, loader: 'style-loader!css-loader'},
@@ -16,6 +16,12 @@ module.exports = {
 		chunkFilename: "[chunkhash].js"
 	},
 	externals: {
-		jquery: "jQuery"
+		jquery: "jQuery",
+		d3: "d3"
+	},
+	debug: true,
+	devtool: '#inline-source-map',
+	node: {
+	  fs: "empty"
 	}
 }
