@@ -1,1 +1,0 @@
-var styles = require('./sass/main.scss');
