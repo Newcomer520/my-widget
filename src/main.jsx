@@ -11,7 +11,8 @@ for(var i = 0; i < 6; i++) {
 }
 systemsInBlock1[0] = {
 	sysid: 'CIOSIS',
-	name: 'SIS'
+	name: 'SIS',
+	onClick: alertSys
 };
 systemsInBlock1[3] = {
 	sysid: 'CIOSIS',
@@ -21,6 +22,11 @@ systemsInBlock1[5] = {
 	sysid: 'CIOSIS',
 	name: 'BMS'
 };
+
+
+function alertSys(sys) {
+	console.log(sys)
+}
 
 var s1Opt = {
 	themes: {

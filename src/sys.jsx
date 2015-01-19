@@ -23,7 +23,7 @@ var SysWidget = React.createClass({
 
 		return (
 			<Group x={x} y={y} scaleX={scaleX} scaleY={scaleY}
-				onClick={this.handleCLick} 
+				onClick={this.props.sys && this.props.sys.onClick? this.props.sys.onClick.bind(this, this.props.sys): null} 
 				onMouseOver={this.handleMouseOver}
 				onMouseOut={this.handleMouseOut}>
 				{this.renderShapes()}
@@ -97,7 +97,7 @@ var SysWidget = React.createClass({
 
 module.exports = SysWidget;
 
-var STROKE = "#9e9fa1";
-var STROKEWIDTH = "1";
+var STROKE = undefined;//"#9e9fa1";
+var STROKEWIDTH = "0";
 var PATH1 = "m 16.730781,4.3182427 103.876829,0 12.22692,12.0501703 123.63752,-0.27915 c 2.83076,-0.006 3.31076,1.55022 3.31076,4.06871 l 0,163.032777 c 0,2.52137 -2.31852,4.58749 -5.14649,4.58749 l -237.905539,0 c -2.83107,0 -5.14676,-2.06362 -5.14676,-4.58749 l 0,-174.2861373 c 0,-2.52274 2.31569,-4.58636 5.14676,-4.58636 z";
 var PATH2 = "m 6.9143013,55.912263 77.0668897,0 44.533499,-17.97789 141.7014,0.15071 c 2.83078,0.002 3.48058,1.46404 3.30935,3.25853 L 259.78281,184.49896 c -0.17264,1.79597 -2.32132,3.27928 -5.14649,3.27928 l -237.905539,0 c -2.82714,0 -5.01526,-1.4783 -5.14676,-3.27928 L 2.4448513,60.197833 c -0.13151,-1.80198 1.63839,-4.28557 4.46945,-4.28557 z";
