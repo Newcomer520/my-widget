@@ -7,7 +7,7 @@ var System = require('./src/sys.jsx');
 
 module.exports = {
 	utils: require('./src/require-react-art').ART,
-	CenterRegion: CenterRegion
+	CenterRegion: CenterRegion,
 	CircleEntry: CircleEntry,
 	RectangleEntry: RectangleEntry,
 	EllipseEntry: EllipseEntry,
