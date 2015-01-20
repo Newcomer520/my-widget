@@ -5,6 +5,8 @@ var CircleEntry = require('./circle-entry.jsx');
 var RectangleEntry = require('./rectangle-entry.jsx');
 var CircleBlueStyle = require('./themes/blue-circle');
 var CircleGreenStyle = require('./themes/green-circle');
+var EllipseEntry = require('./ellipse-entry.jsx');
+var Ellipse =  require('./require-react-art').Ellipse;
 
 var CenterRegion = React.createClass({
 	propTypes: {
@@ -19,6 +21,7 @@ var CenterRegion = React.createClass({
 		return (
 			<Surface width={w} height={h}>
 				{this.renderCircles()}
+				<Ellipse x={0} y={0} width={100} height={100} fill="#fff" />
 				<RectangleEntry 
 					{...cordinate(0, 0)}
 					theme={require('./themes/orange-rect')}
@@ -34,8 +37,10 @@ var CenterRegion = React.createClass({
 			circlesInRow.forEach(function(circle, cIdx) {
 				var theme = rIdx < 3 ? CircleGreenStyle: CircleBlueStyle;
 				Circles.push(
-					<CircleEntry 
-						{...cordinate(circle.x, circle.y)} 						
+					<EllipseEntry
+						{...cordinate(circle.x, circle.y)} 
+						width={200}
+						height={100}
 						radius={CRADIUS}
 						descriptions={CIRCLEDESCRIPTIONS[rIdx][cIdx]}
 						theme={theme}
